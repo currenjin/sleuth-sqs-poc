@@ -1,0 +1,30 @@
+# docker-compose.yml
+
+version: "3"
+services:
+  publisher:
+    container_name: publisher
+    image: linux/amd64
+    restart: always
+    ports:
+      - "5000:8080"
+    build:
+      context: ./publisher/.
+
+  consumer:
+    container_name: consumer
+    image: linux/amd64
+    restart: always
+    ports:
+      - "5001:8080"
+    build:
+      context: ./consumer/.
+
+  zipkin-server:
+    container_name: zipkin-server
+    image: openzipkin/zipkin
+    restart: always
+    ports:
+      - "9411:9411"
+    build:
+      context: .
