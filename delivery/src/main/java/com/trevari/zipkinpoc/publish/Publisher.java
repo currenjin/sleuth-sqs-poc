@@ -11,7 +11,7 @@ public class Publisher {
 
     private final Logger logger = LoggerFactory.getLogger(Publisher.class);
 
-    @Value("${app.queue.name-2}")
+    @Value("${delivery.queue.name}")
     private String queueName;
 
     private final QueueMessagingTemplate messagingTemplate;

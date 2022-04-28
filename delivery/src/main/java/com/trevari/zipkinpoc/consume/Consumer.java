@@ -1,4 +1,4 @@
-package com.trevari.zipkinpoc.consumer;
+package com.trevari.zipkinpoc.consume;
 
 import com.amazonaws.services.sns.model.MessageAttributeValue;
 import com.trevari.zipkinpoc.publish.Publisher;
@@ -20,7 +20,7 @@ public class Consumer {
         this.publisher = publisher;
     }
 
-    @SqsListener("${app.queue.name}")
+    @SqsListener("${post.queue.name}")
     public void receiveMessage(String message, @Headers Map<String, MessageAttributeValue> sqsHeaders) {
         logger.info("[우편 수신]");
         logger.info("[내용] " + message);

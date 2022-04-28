@@ -1,8 +1,3 @@
-app:
-  queue:
-    name: ${POST_QUEUE_NAME}
-    name-2: ${DELIVERY_QUEUE_NAME}
-
 spring:
   application:
     name: delivery
@@ -23,3 +18,5 @@ cloud:
     stack:
       auto: false
 
+post.queue.name: ${POST_QUEUE_NAME}
+delivery.queue.name: ${DELIVERY_QUEUE_NAME}
