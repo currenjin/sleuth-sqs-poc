@@ -9,7 +9,7 @@ services:
     ports:
       - "5000:8080"
     build:
-      context: ./publisher/.
+      context: post/.
 
   consumer:
     container_name: consumer
@@ -18,7 +18,7 @@ services:
     ports:
       - "5001:8080"
     build:
-      context: ./consumer/.
+      context: delivery/.
 
   zipkin-server:
     container_name: zipkin-server

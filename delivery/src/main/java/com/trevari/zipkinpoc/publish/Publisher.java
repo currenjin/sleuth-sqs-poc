@@ -1,0 +1,29 @@
+package com.trevari.zipkinpoc.publish;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.aws.messaging.core.QueueMessagingTemplate;
+import org.springframework.stereotype.Service;
+
+@Service
+public class Publisher {
+
+    private final Logger logger = LoggerFactory.getLogger(Publisher.class);
+
+    @Value("${app.queue.name-2}")
+    private String queueName;
+
+    private final QueueMessagingTemplate messagingTemplate;
+
+    public Publisher(QueueMessagingTemplate messagingTemplate) {
+        this.messagingTemplate = messagingTemplate;
+    }
+
+    public void send(Object message) {
+        logger.info("Sending message to queue");
+
+        messagingTemplate.convertAndSend(queueName, message);
+    }
+
+}

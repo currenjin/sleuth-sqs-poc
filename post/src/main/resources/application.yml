@@ -1,10 +1,10 @@
 app:
   queue:
-    name: ${QUEUE_NAME}
+    name: ${PUBLISH_QUEUE_NAME}
 
 spring:
   application:
-    name: publisher
+    name: post
 
   zipkin:
     base-url: ${ZIPKIN_URL}

@@ -1,10 +1,11 @@
 app:
   queue:
-    name: ${QUEUE_NAME}
+    name: ${CONSUME_QUEUE_NAME}
+    name-2: ${PUBLISH_QUEUE_NAME}
 
 spring:
   application:
-    name: consumer
+    name: delivery
 
   zipkin:
     base-url: ${ZIPKIN_URL}

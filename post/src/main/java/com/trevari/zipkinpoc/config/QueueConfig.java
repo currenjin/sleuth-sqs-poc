@@ -1,4 +1,4 @@
-package com.trevari.zipkinpoc.consumer;
+package com.trevari.zipkinpoc.config;
 
 import brave.Tracer;
 import brave.Tracing;
