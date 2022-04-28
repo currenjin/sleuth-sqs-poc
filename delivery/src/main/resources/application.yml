@@ -1,7 +1,7 @@
 app:
   queue:
-    name: ${CONSUME_QUEUE_NAME}
-    name-2: ${PUBLISH_QUEUE_NAME}
+    name: ${POST_QUEUE_NAME}
+    name-2: ${DELIVERY_QUEUE_NAME}
 
 spring:
   application:

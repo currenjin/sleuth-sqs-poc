@@ -1,6 +1,6 @@
 app:
   queue:
-    name: ${PUBLISH_QUEUE_NAME}
+    name: ${POST_QUEUE_NAME}
 
 spring:
   application:
