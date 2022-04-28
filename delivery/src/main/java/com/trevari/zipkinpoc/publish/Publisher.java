@@ -23,7 +23,7 @@ public class Publisher {
     public void send(Object message) {
         messagingTemplate.convertAndSend(queueName, message);
 
-        logger.info("[배송 요청 완료]");
+        logger.info("[배송 완료]");
     }
 
 }
