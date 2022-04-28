@@ -1,6 +1,6 @@
 # Sleuth AWS SQS POC
 
-해당 프로젝트는 Slueth(Zipkin) 을 통한 메시지 추적 POC(Proof of concept) 입니다.<br>
+해당 프로젝트는 Slueth(Zipkin) 를 통한 메시지 추적 POC(Proof of concept) 입니다.<br>
 Rest API 를 통해 POST 요청을 받으면, 메시지를 발행/소비 합니다. 이 과정에서 유지되는 TraceId 를 확인합니다.<br>
 
 ## Diagram
