@@ -22,10 +22,9 @@ public class Consumer {
 
     @SqsListener("${post.queue.name}")
     public void receiveMessage(String message, @Headers Map<String, MessageAttributeValue> sqsHeaders) {
-        logger.info("[우편 수신]");
-        logger.info("[내용] " + message);
+        logger.info("[배송 요청 수신]");
+        logger.info("내용 : " + message);
 
         publisher.send(message);
-        logger.info("[우편을 배송합니다]");
     }
 }

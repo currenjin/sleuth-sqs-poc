@@ -21,9 +21,9 @@ public class Publisher {
     }
 
     public void send(Object message) {
-        logger.info("Sending message to queue");
-
         messagingTemplate.convertAndSend(queueName, message);
+
+        logger.info("[배송 요청 완료]");
     }
 
 }

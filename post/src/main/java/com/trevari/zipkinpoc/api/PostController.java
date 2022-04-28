@@ -22,7 +22,7 @@ public class PostController {
     @PostMapping
     public void sendMessage(@RequestBody String message) {
         logger.info("[우편 발송 요청]");
-        logger.info("[내용] " + message);
+        logger.info("내용 : " + message);
 
         publisher.send(message);
     }
