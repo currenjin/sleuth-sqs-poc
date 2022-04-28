@@ -7,17 +7,17 @@ Rest API 를 통해 POST 요청을 받으면, 메시지를 발행/소비 합니�
 <img width="1244" alt="image" src="https://user-images.githubusercontent.com/60500649/165676051-07aed263-8549-4e59-88da-730f4420f431.png">
 
 ## Run
-### Project 클론
+### Clone project
 ```
 $ git clone https://github.com/currenjin/sleuth-sqs-poc
 ```
 
-### Docker 컨테이너 실행
+### Run container
 ```
 $ docker-compose up
 ```
 
-### API 호출 명령어
+### Invoke api
 ```
 $ curl --request POST --data 'test' http://localhost:8080/post
 ```
