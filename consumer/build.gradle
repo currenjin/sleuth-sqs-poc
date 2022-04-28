@@ -1,5 +1,5 @@
 plugins {
-	id "org.springframework.boot" version "2.6.7"
+	id "org.springframework.boot" version "2.3.4.RELEASE"
 	id "io.spring.dependency-management" version "1.0.11.RELEASE"
 	id 'java'
 }
@@ -11,11 +11,11 @@ repositories {
 }
 
 dependencies {
-	implementation('io.awspring.cloud:spring-cloud-starter-aws-messaging:2.4.1') {
-		exclude group: 'com.amazonaws', module: 'aws-java-sdk-s3'
-	}
+	implementation 'org.springframework.cloud:spring-cloud-aws-messaging:2.2.6.RELEASE'
+	implementation 'org.springframework.cloud:spring-cloud-aws-autoconfigure:2.2.6.RELEASE'
 
-	implementation 'org.springframework.cloud:spring-cloud-sleuth-zipkin:3.1.1'
-	implementation 'org.springframework.cloud:spring-cloud-starter-sleuth:3.1.1'
+	implementation 'org.springframework.cloud:spring-cloud-starter-sleuth:2.2.8.RELEASE'
+	implementation 'org.springframework.cloud:spring-cloud-sleuth-zipkin:2.2.8.RELEASE'
+
 	implementation 'io.zipkin.aws:brave-instrumentation-aws-java-sdk-sqs:0.23.4'
 }

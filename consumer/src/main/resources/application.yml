@@ -1,10 +1,24 @@
 app:
   queue:
-    name: ZIPKIN-TEST-QUEUE
+    name: ${QUEUE_NAME}
 
 spring:
   application:
     name: consumer
+
   zipkin:
-    base-url: http://localhost:9411
+    base-url: ${ZIPKIN_URL}
+
+cloud:
+  aws:
+    credentials:
+      accessKey: ${AWS_ACCESS_KEY_ID}
+      secretKey: ${AWS_SECRET_ACCESS_KEY}
+
+    region:
+      auto: false
+      static: ap-northeast-2
+
+    stack:
+      auto: false
 

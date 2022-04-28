@@ -1,9 +1,9 @@
 package com.trevari.zipkinpoc.consumer;
 
 import com.amazonaws.services.sns.model.MessageAttributeValue;
-import io.awspring.cloud.messaging.listener.annotation.SqsListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.cloud.aws.messaging.listener.annotation.SqsListener;
 import org.springframework.messaging.handler.annotation.Headers;
 import org.springframework.stereotype.Service;
 
