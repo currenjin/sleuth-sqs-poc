@@ -1,9 +1,7 @@
 ## COMMANDS
 
 start-app:
-	docker-compose up -d zipkin-server
-	docker-compose up -d publisher
-	docker-compose up -d consumer
+	docker-compose up
 
 stop-app:
 	docker-compose down
