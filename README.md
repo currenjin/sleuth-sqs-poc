@@ -14,8 +14,10 @@ $ git clone https://github.com/currenjin/sleuth-sqs-poc
 
 ### Run container
 ```
-$ docker-compose up
+$ make start-app
 ```
+
+*jar is required.
 
 ### Invoke api
 ```
